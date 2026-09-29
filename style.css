@@ -80,11 +80,11 @@ h2 {
 }
 
 .bg-success {
-    background-color: #4facfe !important; /* Biru cerah untuk Selesai */
+    background-color: #4facfe !important; 
 }
 
 .bg-warning {
-    background-color: #ffe53b !important; /* Kuning cerah untuk Belum Selesai */
+    background-color: #ffe53b !important; 
     color: #333 !important;
 }
 
