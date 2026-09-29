@@ -40,7 +40,7 @@
             try {
                 const userCredential = await createUserWithEmailAndPassword(auth, email, password);
                 await updateProfile(userCredential.user, { displayName: nama });
-                alert("Registrasi berhasil! Silakan login.");
+                alert("Registrasi berhasil!");
                 window.location.href = "index.html";
             } catch (error) {
                 alert("Error: " + error.message);
