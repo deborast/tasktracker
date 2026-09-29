@@ -14,7 +14,7 @@ if (inputDeadline) {
 
 onAuthStateChanged(auth, (user) => {
     if (!user) {
-        window.location.href = "login.html";
+        window.location.href = "index.html";
     } else {
         userUid = user.uid;
         tugasRef = ref(db, `ccds8/${userUid}`);
@@ -46,7 +46,7 @@ if (btnLogout) {
             confirmButtonText: 'Ya, Logout!'
         }).then((result) => {
             if (result.isConfirmed) {
-                signOut(auth).then(() => window.location.href = "login.html");
+                signOut(auth).then(() => window.location.href = "index.html");
             }
         });
     });
