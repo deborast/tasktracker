@@ -93,3 +93,80 @@ h2 {
     margin-right: 5px;
     font-weight: 600;
 }
+
+/* styling tambahan auth*/
+.auth-title {
+    color: #ff758c;
+    font-weight: 600;
+}
+.auth-link {
+    color: #ff758c;
+    text-decoration: none;
+    font-weight: 600;
+}
+.auth-link:hover {
+    color: #ff7eb3;
+    text-decoration: underline;
+}
+
+/* darkmode cobacoba */
+body.dark-mode {
+    background: #121212 !important; 
+    background-image: none !important; 
+    color: #e0e0e0 !important;
+}
+body.dark-mode .navbar {
+    background: rgba(18, 18, 18, 0.95) !important;
+    border-bottom: 2px solid #ff758c !important;
+}
+
+body.dark-mode .card {
+    background-color: #1a1a1a !important;
+    border: 2px solid #ff758c !important;
+    box-shadow: 0 0 15px rgba(255, 117, 140, 0.15) !important;
+}
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode h4, 
+body.dark-mode h5,
+body.dark-mode .text-dark {
+    color: #ff758c !important;
+}
+body.dark-mode input, 
+body.dark-mode select {
+    background-color: #2a2a2a !important;
+    color: #fff !important;
+    border: 1px solid #ff758c !important;
+}
+body.dark-mode input::placeholder, 
+body.dark-mode textarea::placeholder {
+    color: #cccccc !important;
+    opacity: 1 !important;
+}
+body.dark-mode input:focus, 
+body.dark-mode select:focus {
+    box-shadow: 0 0 8px rgba(255, 117, 140, 0.5) !important;
+}
+body.dark-mode .table {
+    color: #e0e0e0 !important;
+}
+body.dark-mode .table-dark {
+    background-color: #ff758c !important;
+    color: #fff !important;
+}
+body.dark-mode .table-dark th {
+    background-color: #ff758c !important;
+    border-color: #ff758c !important;
+}
+body.dark-mode .table-hover tbody tr:hover {
+    background-color: rgba(255, 117, 140, 0.15) !important;
+}
+body.dark-mode .swal2-popup {
+    background-color: #1a1a1a !important;
+    border: 2px solid #ff758c !important;
+    color: #fff !important;
+}
+body.dark-mode .text-muted {
+    color: #999999 !important;
+}

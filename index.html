@@ -5,13 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tracker Tugas Kuliah</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm" style="background: rgba(255,255,255,0.85); backdrop-filter: blur(10px);">
+        <div class="container">
+            <a class="navbar-brand fw-bold" style="color: #ff758c;" href="#">🎓 TaskTracker</a>
+            <div class="d-flex align-items-center">
+                <img id="userAvatar" src="" alt="Profil" class="rounded-circle me-2 shadow-sm" style="width: 35px; height: 35px; object-fit: cover; display: none;">
+                <button id="btnDarkMode" class="btn btn-sm btn-outline-dark me-2">🌙</button>
+                <button id="btnAturProfil" class="btn btn-sm btn-outline-secondary me-2">Atur Profil</button>
+                <button id="btnLogout" class="btn btn-sm btn-danger">Logout</button>
+            </div>
+        </div>
+    </nav>
+
     <div class="container mt-5">
         <h2 class="text-center mb-4">Tracker Tugas Kuliah</h2>
-        
-
         <div class="card mb-4 shadow-sm">
             <div class="card-body">
                 <form id="tugasForm">
@@ -39,26 +50,64 @@
             </div>
         </div>
 
-        <div class="card shadow-sm">
+        <div class="card shadow-sm mb-5">
             <div class="card-body">
-                <table class="table table-hover">
-                    <thead class="table-dark">
-                        <tr>
-                            <th>Mata Kuliah</th>
-                            <th>Tugas</th>
-                            <th>Deadline</th>
-                            <th>Prioritas</th>
-                            <th>Status</th>
-                            <th>Aksi</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tabelTugas">
-                    </tbody>
-                </table>
+                <div class="row text-center mb-3">
+                    <div class="col-4">
+                        <h5 class="text-primary fw-bold" id="statTotal">0</h5>
+                        <small class="text-muted">Total Tugas</small>
+                    </div>
+                    <div class="col-4">
+                        <h5 class="text-success fw-bold" id="statSelesai">0</h5>
+                        <small class="text-muted">Selesai</small>
+                    </div>
+                    <div class="col-4">
+                        <h5 class="text-warning fw-bold" id="statBelum">0</h5>
+                        <small class="text-muted">Belum Selesai</small>
+                    </div>
+                </div>
+                
+                <div class="progress mb-4" style="height: 20px; border-radius: 10px;">
+                    <div id="progressBar" class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%;">0%</div>
+                </div>
+
+                <div class="row mb-3 g-2">
+                    <div class="col-md-8">
+                        <input type="text" id="searchInput" class="form-control" placeholder="🔍 Cari nama tugas atau mata kuliah...">
+                    </div>
+                    <div class="col-md-4">
+                        <select id="sortInput" class="form-select">
+                            <option value="default">Urutkan Berdasarkan...</option>
+                            <option value="deadlineAsc">📅 Tanggal Terdekat</option>
+                            <option value="deadlineDesc">📅 Tanggal Terjauh</option>
+                            <option value="prioritas">🔥 Prioritas Tinggi</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Mata Kuliah</th>
+                                <th>Tugas</th>
+                                <th>Deadline</th>
+                                <th>Prioritas</th>
+                                <th>Status</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabelTugas">
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-    </div>
+    </div> 
 
-    <script type="module" src="app.js"></script>
+<footer class="text-center mt-5 mb-4 text-muted">
+    <small>Tugas Cloud Computing &copy; 2026 | Dibuat dengan 💻 oleh DS </small>
+</footer>
+    <script type="module" src="js/app.js"></script>
 </body>
 </html>
