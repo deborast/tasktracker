@@ -1,2 +1,4 @@
 #mengabaikan file kredensial firebase agar tidak dipush ke git
-js/firebase-config.js
+#js/firebase-config.js
+
+#tidak jadi karena deploymentnya via git kalau ga kebaca jadi ga connect ke db
