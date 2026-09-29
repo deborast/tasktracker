@@ -22,7 +22,7 @@
                     <input type="password" id="regPassword" class="form-control" placeholder="Password (Min 6 Karakter)" required>
                 </div>
                 <button type="submit" class="btn btn-primary w-100 mb-3">Register</button>
-                <p class="text-center mb-0">Sudah punya akun? <a href="login.html" class="auth-link">Login di sini</a></p>
+                <p class="text-center mb-0">Sudah punya akun? <a href="index.html" class="auth-link">Login di sini</a></p>
             </form>
         </div>
     </div>
@@ -41,7 +41,7 @@
                 const userCredential = await createUserWithEmailAndPassword(auth, email, password);
                 await updateProfile(userCredential.user, { displayName: nama });
                 alert("Registrasi berhasil! Silakan login.");
-                window.location.href = "login.html";
+                window.location.href = "index.html";
             } catch (error) {
                 alert("Error: " + error.message);
             }
